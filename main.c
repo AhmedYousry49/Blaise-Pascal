@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include "division.h"
 
 int main()
@@ -20,6 +21,7 @@ int main()
         float result = division(testCases[i][0], testCases[i][1]);
         printf("Test case %d: %.2f / %.2f = %.2f\n", i + 1, testCases[i][0], testCases[i][1], result);
     }
-
-    return 0;
+  
+  return 0 ;
+  
 }

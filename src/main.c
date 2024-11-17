@@ -1,10 +1,6 @@
 #include <stdio.h>
-#include "multiplication.h"
 #include "remainder.h"
-#include "subtraction.h"
-#include "addition.h"
-#include "power.h"
-#include "division.h"
+
 
 int main()
 {
@@ -27,11 +23,7 @@ int main()
 
         switch (choice)
         {
-        case 1:
-            printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
-            printf("Result: %.2lf\n", subtraction(num1, num2));
-            break;
+        
 
         case 2:
             printf("Enter dividend and divisor: ");
@@ -39,28 +31,7 @@ int main()
             printf("Remainder: %d\n", calculate_remainder(dividend, divisor));
             break;
 
-        case 3:
-            printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
-            printf("Result: %.2lf\n", multiply_double(num1, num2));
-            break;
-
-        case 4:
-            printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
-            printf("Result: %.2lf\n", addition(num1, num2));
-            break;
-        case 5:
-            printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
-            printf("Result: %.2lf\n", powerFunction(num1, num2));
-            break;
-        case 6:
-            printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
-            printf("Result: %.2lf\n", division(num1, num2));
-            break;
-
+        
         default:
             printf("Invalid choice\n");
         }

@@ -17,12 +17,13 @@ The name *Blaise Pascal* pays homage to the famous French mathematician, physici
 
 Each contributor implemented a specific operation:  
 
+- **[Abdelrahman Fazloka](https://github.com/AbdelrhmanAFayed)**: Subtraction  
 - **[Ahmed Youssry](https://github.com/AhmedYousry49)**: Remainder  
 - **[Mohamed Awadin](https://github.com/MohamedAwadin)**: Multiplication  
 - **[Omar Mohamed](https://github.com/omarmohamedmoustafa)**: Addition  
 - **[Esraa Fawzy](https://github.com/Esraa-f28)**: Division  
 - **[Yossef Mostafa](https://github.com/YoussefMostafaMohammed)**: Power  
-- **[Abdelrahman Fazloka](https://github.com/AbdelrhmanAFayed)**: Subtraction  
+
 
 ## Technologies  
 
@@ -39,14 +40,7 @@ Each contributor implemented a specific operation:
    ```bash  
    cd Blaise-Pascal  
    ```  
-   ```bash  
-   cd build  
-   ```  
-3. Run the calculator program:  
-   ```bash  
-   main_app.exe
-   ```  
-4. Follow on-screen prompts to perform calculations.  
+
 
 ## Example Usage  
 

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #vscode settings
 .vscode
 
@@ -5,6 +6,11 @@
 build
 */build/*
 
+=======
+# vscode
+.vscode
+
+>>>>>>> Stashed changes
 # Prerequisites
 *.d
 

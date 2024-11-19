@@ -4,6 +4,11 @@ This repository contains a simple calculator application designed to perform bas
 
 The name *Blaise Pascal* pays homage to the famous French mathematician, physicist, and inventor Blaise Pascal, who created one of the earliest mechanical calculators, the **Pascaline**, in 1642. Just as Pascal's invention laid the foundation for modern computational devices, this project represents a foundational step in understanding and implementing basic arithmetic operations programmatically.  
 
+
+<p align='center'>
+<img width="95%" src="./images/Blaise Pascal_ITI.png"/>
+</p> 
+
 ## Features  
 
 - **Addition**: Computes the sum of two numbers.  

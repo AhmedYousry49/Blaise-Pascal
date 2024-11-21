@@ -1,13 +1,16 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
-# Define the library
+
 project(remainder)
 
-# Include the header files
+
+set(CMAKE_GENERATOR "MinGW Makefiles" CACHE INTERNAL "" FORCE)
+
+
 include_directories(include)
 
-# Add source files for the library
+
 set(SOURCE_FILES src/remainder.c)
 
-# Create a static library
+
 add_library(remainder STATIC ${SOURCE_FILES})

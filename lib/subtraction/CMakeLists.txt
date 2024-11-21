@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 project(subtraction)
 
 
-set(CMAKE_GENERATOR "Ninja" CACHE INTERNAL "" FORCE)
+set(CMAKE_GENERATOR "MinGW Makefiles" CACHE INTERNAL "" FORCE)
 
 
 include_directories(include)

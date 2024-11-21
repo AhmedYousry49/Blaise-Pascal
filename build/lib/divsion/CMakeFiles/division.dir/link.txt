@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libdivision.a CMakeFiles/division.dir/src/division.c.obj
+C:\msys64\mingw64\bin\ranlib.exe libdivision.a

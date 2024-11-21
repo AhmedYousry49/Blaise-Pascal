@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libmultiplication.a CMakeFiles/multiplication.dir/src/multiplication.c.obj
+C:\msys64\mingw64\bin\ranlib.exe libmultiplication.a

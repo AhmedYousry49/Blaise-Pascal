@@ -1,5 +1,5 @@
-#include "power.h"
-
+#define ll long long
+#define ld long double
 double powerFunction(double base, double exponent)
 {
     double temp;

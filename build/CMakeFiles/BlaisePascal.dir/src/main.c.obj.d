@@ -10,9 +10,10 @@ CMakeFiles/BlaisePascal.dir/src/main.c.obj: \
  C:/msys64/mingw64/include/_mingw_off_t.h \
  C:/msys64/mingw64/include/swprintf.inl \
  C:/msys64/mingw64/include/sec_api/stdio_s.h \
- D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/remainder/include/remainder.h \
- D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/addition/include/addition.h \
+ D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/remainder/inc/remainder.h \
+ D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/inc/config.h \
+ D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/addition/inc/addition.h \
  D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/divsion/inc/division.h \
  D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/multiplication/inc/multiplication.h \
- D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/power/inc/power.h \
- D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/subtraction/include/subtraction.h
+ D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/Power/inc/power.h \
+ D:/work/ITI/Blaise-Pascal/Calculator_Blaise_Pascal/Blaise-Pascal/lib/subtraction/inc/subtraction.h

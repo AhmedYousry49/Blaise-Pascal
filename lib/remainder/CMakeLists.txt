@@ -1,16 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
 
-
 project(remainder)
-
 
 set(CMAKE_GENERATOR "MinGW Makefiles" CACHE INTERNAL "" FORCE)
 
-
-include_directories(include)
-
+set(CONFIGRATION_FILES ${CMAKE_SOURCE_DIR}/inc)
 
 set(SOURCE_FILES src/remainder.c)
 
+add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 
-add_library(remainder STATIC ${SOURCE_FILES})
+target_include_directories(${PROJECT_NAME} PUBLIC  inc)
+target_include_directories(${PROJECT_NAME} PUBLIC  ${CONFIGRATION_FILES})

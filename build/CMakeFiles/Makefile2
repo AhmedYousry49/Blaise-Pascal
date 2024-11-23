@@ -218,12 +218,12 @@ lib/subtraction/clean: lib/subtraction/CMakeFiles/subtraction.dir/clean
 # Target rules for target CMakeFiles/BlaisePascal.dir
 
 # All Build rule for target.
-CMakeFiles/BlaisePascal.dir/all: lib/multiplication/CMakeFiles/multiplication.dir/all
-CMakeFiles/BlaisePascal.dir/all: lib/Power/CMakeFiles/power.dir/all
 CMakeFiles/BlaisePascal.dir/all: lib/remainder/CMakeFiles/remainder.dir/all
 CMakeFiles/BlaisePascal.dir/all: lib/addition/CMakeFiles/addition.dir/all
 CMakeFiles/BlaisePascal.dir/all: lib/divsion/CMakeFiles/division.dir/all
+CMakeFiles/BlaisePascal.dir/all: lib/multiplication/CMakeFiles/multiplication.dir/all
 CMakeFiles/BlaisePascal.dir/all: lib/subtraction/CMakeFiles/subtraction.dir/all
+CMakeFiles/BlaisePascal.dir/all: lib/Power/CMakeFiles/power.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BlaisePascal.dir\build.make CMakeFiles/BlaisePascal.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BlaisePascal.dir\build.make CMakeFiles/BlaisePascal.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\work\ITI\Blaise-Pascal\Calculator_Blaise_Pascal\Blaise-Pascal\build\CMakeFiles --progress-num=1,2 "Built target BlaisePascal"

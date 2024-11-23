@@ -1,1 +1,0 @@
- lib/remainder/libremainder.a lib/addition/libaddition.a lib/divsion/libdivision.a lib/multiplication/libmultiplication.a lib/Power/libpower.a lib/subtraction/libsubtraction.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

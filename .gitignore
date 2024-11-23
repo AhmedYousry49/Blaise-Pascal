@@ -4,6 +4,7 @@
 
 # build file
 build
+build/
 */build/*
 
 # Prerequisites

@@ -7,13 +7,10 @@ project(subtraction)
 set(CMAKE_GENERATOR "MinGW Makefiles" CACHE INTERNAL "" FORCE)
 
 
-include_directories(include)
-
-
 set(SOURCE_FILES src/subtraction.c)
 
 
-add_library(subtraction STATIC ${SOURCE_FILES})
+add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 
-
-
+target_include_directories(${PROJECT_NAME} PUBLIC  inc)
+target_include_directories(${PROJECT_NAME} PUBLIC  ${CONFIGRATION_FILES})   

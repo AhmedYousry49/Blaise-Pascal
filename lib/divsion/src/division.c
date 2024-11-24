@@ -1,5 +1,5 @@
 #include "division.h"
- 
+
 
 DIV_FUNCTION_STATUS division(double number1, double number2, double *result) {
 #ifdef DIV
@@ -14,5 +14,4 @@ DIV_FUNCTION_STATUS division(double number1, double number2, double *result) {
     return DIV_NOT_AVAILABLE; // Division functionality not available
 #endif
 }
-
 

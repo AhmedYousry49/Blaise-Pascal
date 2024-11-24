@@ -1,6 +1,7 @@
 #ifndef DIVISION_H
 #define DIVISION_H
 
+
 #include <stdio.h>
 #include "config.h"
 
@@ -12,4 +13,5 @@ typedef enum {
 
 DIV_FUNCTION_STATUS division(double number1, double number2);
 
-#endif 
+
+#endif

@@ -1,8 +1,8 @@
 #ifndef POWER_H
 #define POWER_H
 
-#define ll long long
-#define ld long double
+#include "config.h"
+#include <stdio.h>
 
 double powerFunction(double base, double exponent);
 

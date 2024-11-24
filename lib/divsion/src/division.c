@@ -2,7 +2,7 @@
 
 
 DIV_FUNCTION_STATUS division(double number1, double number2, double *result) {
-#ifdef DIV
+#ifdef ENABLE_DIV
     if (number2 == 0) {
         printf("Error: cannot divide by zero.\n");
         return DIV_FUNCTION_ERROR_DIVIDE_BY_ZERO; // Returning an error code

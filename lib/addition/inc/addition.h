@@ -9,5 +9,5 @@ typedef enum {
 }ADD_FUNCTION_STATUS;
 
 
-ADD_FUNCTION_STATUS addition(double num1, double num2,int * res);
+ADD_FUNCTION_STATUS addition(double num1, double num2,double * res);
 #endif

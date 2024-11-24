@@ -1,11 +1,11 @@
 #include "power.h"
 #define ll long long
 #define ld long double
-#define POW
-//#include "config.h"
+//#define POW
+#include "config.h"
 double powerFunction(double base, double exponent)
 {
-#ifdef POW
+#ifdef ENABLE_POW
     double temp;
     if (((ll)exponent) == 0)
         return 1.0;

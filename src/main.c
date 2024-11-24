@@ -44,7 +44,7 @@ int main()
             }
             else
             {
-                printf("Not allow use Remainder_function\n ");
+                printf("Not Allow use Remainder_function\n ");
 
             }
             break;
@@ -58,7 +58,7 @@ int main()
             }
             else
             {
-                printf("Not allow use Multiplication_function\n ");
+                printf("Not Allow use Multiplication_function\n ");
             } 
             break;
 

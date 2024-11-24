@@ -1,15 +1,16 @@
+// remainderm.c
 #include "remainder.h"
-// Function definition to calculate remainder
-#define REM
 
-int calculate_remainder(int dividend, int divisor)
+// Function definition to calculate remainder
+REM_FUNCTION_STATUS calculate_remainder(int dividend, int divisor, int * res)
 {
 #ifdef REM
     if (divisor == 0) // Error: Division by zero is not allowed.\n
-        return -1;
-    return dividend % divisor;
+        *res = -1;
+        return REM_AVAILABLE ;
+    *res = dividend % divisor;
+    return REM_AVAILABLE ;
 #else
-    printf("You are too poor to use remainder fauture\n");
-    return -1;
+    return REM_NOT_AVAILABLE;
 #endif
 }

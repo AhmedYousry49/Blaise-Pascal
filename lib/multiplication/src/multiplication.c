@@ -1,14 +1,35 @@
-int multiply_int(int a, int b)
+#include "multiplication.h"
+
+
+MUL_FUNCTION_STATUS multiply_int(int a, int b, int * res)
 {
-    return a * b;
+#ifdef MUL    
+    *res =  a * b;
+    return MUL_AVAILABLE ;
+#else 
+    
+    return MUL_NOT_AVAILABLE;
+#endif
 }
 
-float multiply_float(float a, float b)
+
+MUL_FUNCTION_STATUS multiply_float(float a, float b, float * res ) 
 {
-    return a * b;
+#ifdef MUL    
+    *res =  a * b;
+    return MUL_AVAILABLE ;
+#else 
+    
+    return MUL_NOT_AVAILABLE;
+#endif
 }
 
-double multiply_double(double a, double b)
+MUL_FUNCTION_STATUS multiply_double(double a, double b, double * res )
 {
-    return a * b;
+#ifdef MUL    
+    *res =  a * b;
+    return MUL_AVAILABLE ;
+#else 
+    return MUL_NOT_AVAILABLE;
+#endif
 }

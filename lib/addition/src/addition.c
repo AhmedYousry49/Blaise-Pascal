@@ -1,7 +1,15 @@
+#include "addition.h"
 
-double addition(double num1, double num2)
+
+ADD_FUNCTION_STATUS  addition(double num1, double num2,int *res)
 {
-    double result = num1 + num2;
+    #ifdef ADD
 
-    return result;
+    *res = num1 + num2 ;
+    
+    return ADD_AVAILABLE;
+    #else
+    return ADD_NOT_AVAILABLE;
+
+    #endif
 }

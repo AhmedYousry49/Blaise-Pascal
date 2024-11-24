@@ -1,4 +1,5 @@
 #include <stdio.h>
+//#include "../config.h"
 #include "remainder.h"
 #include "addition.h"
 #include "division.h"
@@ -9,8 +10,9 @@
 int main()
 {
     int choice;
-    double num1, num2;
-    int dividend, divisor;
+    double num1, num2,double_res;
+    float fnum1,fnum2,float_res;
+    int dividend, divisor,Int_res;
 
     while (1)
     {
@@ -33,15 +35,31 @@ int main()
             break;
 
         case 2:
+        
             printf("Enter dividend and divisor: ");
             scanf("%d %d", &dividend, &divisor);
-            printf("Remainder: %d\n", calculate_remainder(dividend, divisor));
+            if(calculate_remainder(dividend, divisor, &Int_res))
+            {
+                printf("Remainder: %d\n", Int_res);
+            }
+            else
+            {
+                printf("Not allow use Remainder_function\n ");
+
+            }
             break;
 
         case 3:
             printf("Enter First and second nums to multiply: ");
             scanf("%lf %lf", &num1, &num2);
-            printf("Result Of Multiply(%lf * %lf): %lf\n", num1, num2, multiply_double(num1, num2));
+            if(multiply_double(num1, num2, &double_res))
+            {
+                printf("Result Of Multiply(%lf * %lf): %lf\n", num1, num2, double_res);
+            }
+            else
+            {
+                printf("Not allow use Multiplication_function\n ");
+            } 
             break;
 
         case 4:

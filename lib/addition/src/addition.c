@@ -1,9 +1,9 @@
 #include "addition.h"
 
 
-ADD_FUNCTION_STATUS  addition(double num1, double num2,int *res)
+ADD_FUNCTION_STATUS  addition(double num1, double num2,double *res)
 {
-    #ifdef ADD
+    #ifdef ENABLE_ADD
 
     *res = num1 + num2 ;
     

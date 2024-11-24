@@ -1,8 +1,8 @@
 // remainderm.h
 #ifndef REMAINDERM_H
 #define REMAINDERM_H
-//#include "config.h"
-#define REM
+#include "config.h"
+//#define REM
 typedef enum {
     REM_NOT_AVAILABLE =0,
     REM_AVAILABLE

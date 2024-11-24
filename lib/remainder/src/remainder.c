@@ -4,7 +4,7 @@
 // Function definition to calculate remainder
 REM_FUNCTION_STATUS calculate_remainder(int dividend, int divisor, int * res)
 {
-#ifdef REM
+#ifdef ENABLE_REM
     if (divisor == 0) // Error: Division by zero is not allowed.\n
         *res = -1;
         return REM_AVAILABLE ;

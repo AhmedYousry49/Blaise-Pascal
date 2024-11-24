@@ -31,9 +31,15 @@ int main()
         case 1:
             printf("Enter First and second nums to substract: ");
             scanf("%lf %lf", &num1, &num2);
-            printf("Result Of Substract(%lf - %lf): %lf\n", num1, num2, subtraction(num1, num2));
+            if(subtraction(num1, num2, &double_res))
+            {
+                printf("Result: %lf\n", double_res);
+            }
+            else
+            {
+                printf("Not Allow use Subtraction_function\n ");
+            }
             break;
-
         case 2:
         
             printf("Enter dividend and divisor: ");
@@ -63,9 +69,16 @@ int main()
             break;
 
         case 4:
-            printf("Enter First and second nums to add: ");
+            printf("Enter First and second nums to Add: ");
             scanf("%lf %lf", &num1, &num2);
-            printf("Result Of Add(%lf + %lf): %lf\n", num1, num2, addition(num1, num2));
+            if(addition(num1, num2, &double_res))
+            {
+                printf("Result: %lf\n", double_res);
+            }
+            else
+            {
+                printf("Not Allow use Addition_function\n ");
+            }
             break;
 
         case 5:
@@ -80,7 +93,14 @@ int main()
         case 6:
             printf("Enter First and second nums to Divided: ");
             scanf("%lf %lf", &num1, &num2);
-            printf("Result Of Div(%lf / %lf): %lf\n", num1, num2, division(num1, num2));
+            if(division(num1, num2, &double_res))
+            {
+                printf("Result Of Div(%lf / %lf): %lf\n", num1, num2, double_res);
+            }
+            else
+            {
+                printf("Not Allow use Division_function\n ");
+            } 
             break;
         default:
             printf("Invalid choice\n");

@@ -3,7 +3,7 @@
 
 MUL_FUNCTION_STATUS multiply_int(int a, int b, int * res)
 {
-#ifdef MUL    
+#ifdef ENABLE_MUL    
     *res =  a * b;
     return MUL_AVAILABLE ;
 #else 
@@ -15,7 +15,7 @@ MUL_FUNCTION_STATUS multiply_int(int a, int b, int * res)
 
 MUL_FUNCTION_STATUS multiply_float(float a, float b, float * res ) 
 {
-#ifdef MUL    
+#ifdef ENABLE_MUL    
     *res =  a * b;
     return MUL_AVAILABLE ;
 #else 
@@ -26,7 +26,7 @@ MUL_FUNCTION_STATUS multiply_float(float a, float b, float * res )
 
 MUL_FUNCTION_STATUS multiply_double(double a, double b, double * res )
 {
-#ifdef MUL    
+#ifdef ENABLE_MUL    
     *res =  a * b;
     return MUL_AVAILABLE ;
 #else 

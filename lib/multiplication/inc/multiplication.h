@@ -2,8 +2,8 @@
 #define MULTIPLICATION_H
 
 
-//#include "config.h"
-#define MUL 
+#include "config.h"
+//#define MUL 
 
 typedef enum {
     MUL_NOT_AVAILABLE =0,

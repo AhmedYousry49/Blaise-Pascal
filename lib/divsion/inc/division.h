@@ -2,8 +2,9 @@
 #define DIVISION_H
 
 
-#include <stdio.h>
+
 #include "config.h"
+#include <stdio.h>
 
 typedef enum {
     DIV_FUNCTION_ERROR_DIVIDE_BY_ZERO = -1,
@@ -11,7 +12,7 @@ typedef enum {
     DIV_AVAILABLE
 }DIV_FUNCTION_STATUS;
 
-DIV_FUNCTION_STATUS division(double number1, double number2);
+DIV_FUNCTION_STATUS division(double number1, double number2, double *result) ;
 
 
-#endif
+#endif //DIVISION_H

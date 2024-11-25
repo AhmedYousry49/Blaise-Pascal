@@ -8,7 +8,7 @@ DIV_FUNCTION_STATUS division(double number1, double number2, double *result) {
         return DIV_FUNCTION_ERROR_DIVIDE_BY_ZERO; // Returning an error code
     } else {
         *result = number1 / number2;
-        return DIV_FUNCTION_SUCCESS; // Division successful
+        return DIV_AVAILABLE; // Division successful
     }
 #else
     return DIV_NOT_AVAILABLE; // Division functionality not available

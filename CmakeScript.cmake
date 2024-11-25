@@ -20,31 +20,32 @@ endif()
 # Make sure Python3 is present and throw an error if it was not found
 find_package(Python3 REQUIRED)
 
-# Macro to configure features by passing the right input to generate_config.py
-macro(configFeature MODULE INPUT)
+# Modified configFeature macro
+macro(configFeature FEATURES_STRING)
+    # Split the features string (Corrected Logic)
+    string(REPLACE " " ";" FEATURES_LIST ${FEATURES_STRING})
+    #string(REPLACE " " ";" FEATURE_LIST ${FEATURES})
 
-    # Generate a unique name for the custom target
-    set(TARGET_NAME "${MODULE}_Target")
+    add_custom_command(
+        OUTPUT ${OUTPUT_FILE}
+        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${CMAKE_SOURCE_DIR} python3 ${CMAKE_SOURCE_DIR}/generate_config.py ${FEATURES_LIST}
+        COMMENT "Generating config.h"
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        VERBATIM
+    )
 
-    # Check if the custom target already exists to avoid conflicts
-    if (NOT TARGET ${TARGET_NAME})
-        # Add the custom command to generate the config.h file
-        add_custom_command(
-            OUTPUT ${OUTPUT_FILE}  # Specify the output file (config.h)
-            COMMAND ${CMAKE_COMMAND} -E env python3 ${CONFIG_SCRIPT} ${INPUT}  # Run the Python script with the passed argument
-            COMMENT "Generating or updating ${OUTPUT_FILE} using ${CONFIG_SCRIPT} with input=${INPUT}" # Print this when the command is executed
-            WORKING_DIRECTORY ${CMAKE_BINARY_DIR} # This specifies the folder the script will be executed in (in build to put config.h there)
-            VERBATIM # Take every command literally and do not overcook
-        )
+    add_custom_target(
+        config_h_target
+        ALL  # Important: Make config.h available for all targets.
+        DEPENDS ${OUTPUT_FILE}
+    )
 
-        # Create a unique custom target for this module
-        add_custom_target(
-            ${TARGET_NAME}      # Custom target name is unique
-            DEPENDS ${OUTPUT_FILE}  # Make sure the target depends on the generated config.h
-        )
-    endif()
-
-    # Ensure that the module library depends on its custom target
-    add_dependencies(${MODULE} ${TARGET_NAME})
+    # Add dependency to each library
+    add_dependencies(remainder config_h_target)
+    add_dependencies(addition config_h_target)
+    add_dependencies(division config_h_target)
+    add_dependencies(multiplication config_h_target)
+    add_dependencies(power config_h_target)
+    add_dependencies(subtraction config_h_target)
 
 endmacro()

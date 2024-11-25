@@ -16,27 +16,16 @@ add_subdirectory(lib/multiplication)
 add_subdirectory(lib/power)
 add_subdirectory(lib/subtraction)
 
-# Split the FEATURES argument passed from the command line into a list
-#if (DEFINED FEATURES)
-#    string(REPLACE "," ";" FEATURE_LIST ${FEATURES})
 
-    # Configure only the requested features
-#    foreach(FEATURE ${FEATURE_LIST})
-#        if (FEATURE STREQUAL "MUL")
-#            configFeature("multiplication" "MUL")
-#        elseif (FEATURE STREQUAL "ADD")
-#        configFeature("addition" "ADD")
-#        elseif (FEATURE STREQUAL "SUB")
-#            configFeature("subtraction" "SUB")
-#        elseif (FEATURE STREQUAL "DIV")
-#            configFeature("division" "DIV")
-#        elseif (FEATURE STREQUAL "POW")
-#            configFeature("power" "POW")
-#        elseif (FEATURE STREQUAL "REM")
-#            configFeature("remainder" "REM")
-#        endif()
-#    endforeach()
-#endif()
+# Pass the FEATURES option to the configFeature macro
+if(DEFINED FEATURES)
+    configFeature(${FEATURES})
+else()
+    message(STATUS "No features specified. Building with all features enabled.")
+    configFeature("ADD;SUB;MUL;DIV;POW;REM") # Default: All features
+endif()
+
+
 
 # Include the generated config.h file (from config.h generation script)
 include_directories(

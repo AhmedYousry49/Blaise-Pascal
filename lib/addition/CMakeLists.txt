@@ -11,10 +11,7 @@ add_library(${PROJECT_NAME} src/addition.c)
 # Include the inc directory and configuration files
 target_include_directories(${PROJECT_NAME} PUBLIC inc)
 target_include_directories(${PROJECT_NAME} PUBLIC ${INCLUDE_DIR})
+
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR})  # Include the generated config.h file
 
-# Use the configFeature macro to configure this library
 
-#configFeature(${PROJECT_NAME} "ADD")
-
-#configFeature(${PROJECT_NAME} "${ADDITION_FEATURES}")

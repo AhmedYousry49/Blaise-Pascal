@@ -9,6 +9,8 @@ def generate_config(features):
     for feature in features:
         # Check if the feature is allowed
         if feature.strip() in ALLOWED_FEATURES:
+            print("feature : ")
+            print(feature.strip())
             config_lines.append(f"#define ENABLE_{feature.strip()}")
         else:
             print(f"Warning: '{feature.strip()}' is not a valid feature and will be ignored.")

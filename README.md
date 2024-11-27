@@ -1,67 +1,74 @@
-# Blaise Pascal - Basic Calculator  
 
-This repository contains a simple calculator application designed to perform basic arithmetic operations. The project is a collaborative effort among six ITI Embedded Systems Track INTAKE_45 contributors, each implementing a specific function to showcase teamwork and individual coding skills.  
+# Blaise Pascal Calculator
 
-The name *Blaise Pascal* pays homage to the famous French mathematician, physicist, and inventor Blaise Pascal, who created one of the earliest mechanical calculators, the **Pascaline**, in 1642. Just as Pascal's invention laid the foundation for modern computational devices, this project represents a foundational step in understanding and implementing basic arithmetic operations programmatically.  
-
+This project implements a basic calculator application with modular functionality for addition, subtraction, multiplication, division, power, and remainder calculations. You can configure which features are included at compile time.
 
 <p align='center'>
 <img width="95%" src="./images/Blaise Pascal_ITI.png"/>
 </p> 
 
-## Features  
 
-- **Addition**: Computes the sum of two numbers.  
-- **Subtraction**: Finds the difference between two numbers.  
-- **Multiplication**: Calculates the product of two numbers.  
-- **Division**: Performs division and returns the quotient.  
-- **Remainder**: Determines the remainder from the division of two numbers.  
-- **Power**: Raises a number to the power of another number.  
+## Features
 
-## Contributors  
+The calculator supports the following operations:
 
-Each contributor implemented a specific operation:  
+* **ADD:** Addition
+* **SUB:** Subtraction
+* **MUL:** Multiplication
+* **DIV:** Division
+* **POW:** Power
+* **REM:** Remainder
 
-- **[Abdelrahman Fazloka](https://github.com/AbdelrhmanAFayed)**: Subtraction  
-- **[Ahmed Youssry](https://github.com/AhmedYousry49)**: Remainder  
-- **[Mohamed Awadin](https://github.com/MohamedAwadin)**: Multiplication  
-- **[Omar Mohamed](https://github.com/omarmohamedmoustafa)**: Addition  
-- **[Esraa Fawzy](https://github.com/Esraa-f28)**: Division  
-- **[Yossef Mostafa](https://github.com/YoussefMostafaMohammed)**: Power  
+## Configuration
+
+You can choose which features to enable when building the project using the `FEATURES` CMake variable.  Here's how:
+
+1. **Configure:** Use the following command to configure the project with CMake, specifying the desired features:
+
+   ```bash
+   cmake -S . -B build -G "MinGW Makefiles" -DFEATURES="<FEATURES>"
+   ```
+
+   Replace `<FEATURES>` with a space-separated list of the features you want to include. **For example**:
+
+   ```bash
+   cmake -S . -B build -G "MinGW Makefiles" -DFEATURES="ADD SUB MUL"  # Enables addition, subtraction, and multiplication
+   cmake -S . -B build -G "MinGW Makefiles" -DFEATURES="POW DIV REM" # Enables power, division, and remainder
+   cmake -S . -B build -G "MinGW Makefiles" -DFEATURES="ADD SUB MUL DIV POW REM" # Enables all features
+   ```
+   The `-B build` part creates a separate build directory, keeping your source tree clean.  The `-G "MinGW Makefiles"` part tells cmake to use MinGW as the compiler.
+
+2. **Build:** After configuring, build the project using:
+
+   ```bash
+   cmake --build build
+   ```
+
+This will compile the code with the selected features enabled.
+
+## Running
+
+After building, the executable will be located in the `build` directory. You can run it from the command line:
+
+```bash
+build/BlaisePascal  
+```
 
 
-## Technologies  
+The calculator will present a menu of available operations based on your configuration. Follow the prompts to perform calculations.
 
-- Programming Language: [C programming Language]  
-- Development Environment: [Cmake]  
+## Example Usage
 
-## How to Use  
+Here's an example of how to configure and build the calculator with addition, subtraction, and multiplication enabled:
 
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/AhmedYousry49/Blaise-Pascal.git  
-   ```  
-2. Navigate to the project directory:  
-   ```bash  
-   cd Blaise-Pascal  
-   ```  
+```bash
+cmake -S . -B build -G "MinGW Makefiles" -DFEATURES="ADD SUB MUL"
+cmake --build build
+build/BlaisePascal # Run the calculator on Windows.
+```
 
+## Important Considerations
 
-## Example Usage  
+* **Feature Names:** Ensure you use the correct feature names (ADD, SUB, MUL, DIV, POW, REM) in all uppercase.
+* **Spaces:** Use spaces to separate the feature names in the `FEATURES` variable.
 
-Here’s an example of how to use the calculator:  
-
-```  
-Select an operation:  
-1. Addition  
-2. Subtraction  
-3. Multiplication  
-4. Division  
-5. Remainder  
-6. Power  
-
-Enter choice (1-6): 1  
-Enter first number: 10  
-Enter second number: 5  
-Result: 10 + 5 = 15  
-```  

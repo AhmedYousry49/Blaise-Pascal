@@ -13,6 +13,3 @@ target_include_directories(${PROJECT_NAME} PUBLIC inc)
 target_include_directories(${PROJECT_NAME} PUBLIC ${INCLUDE_DIR})
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR})  # Include the generated config.h file
 
-# Use the configFeature macro to configure this library
-#configFeature(${PROJECT_NAME} "DIV")
-#configFeature(${PROJECT_NAME} "${DIVISION_FEATURES}")

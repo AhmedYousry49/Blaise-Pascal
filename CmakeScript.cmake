@@ -8,8 +8,6 @@ message(STATUS "Looking for generate_config.py in: ${CMAKE_CURRENT_SOURCE_DIR}/.
 find_program(CONFIG_SCRIPT NAMES generate_config.py 
     PATHS 
         ${CMAKE_CURRENT_SOURCE_DIR} # Current directory
-        ${CMAKE_CURRENT_SOURCE_DIR}/.. # Parent directory
-        ${CMAKE_CURRENT_SOURCE_DIR}/../.. # Grandparent directory
     REQUIRED)
 if (CONFIG_SCRIPT)
     message(STATUS "Found generate_config.py at: ${CONFIG_SCRIPT}")
@@ -23,12 +21,14 @@ find_package(Python3 REQUIRED)
 # Modified configFeature macro
 macro(configFeature FEATURES_STRING)
     # Split the features string (Corrected Logic)
+    
     string(REPLACE " " ";" FEATURES_LIST ${FEATURES_STRING})
+    message(${FEATURES_LIST})
     #string(REPLACE " " ";" FEATURE_LIST ${FEATURES})
 
     add_custom_command(
         OUTPUT ${OUTPUT_FILE}
-        COMMAND ${CMAKE_COMMAND} -E env PYTHONPATH=${CMAKE_SOURCE_DIR} python3 ${CMAKE_SOURCE_DIR}/generate_config.py ${FEATURES_LIST}
+        COMMAND ${CMAKE_COMMAND} -E env python3 ${CMAKE_SOURCE_DIR}/generate_config.py ${FEATURES_LIST}
         COMMENT "Generating config.h"
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
         VERBATIM
@@ -39,13 +39,5 @@ macro(configFeature FEATURES_STRING)
         ALL  # Important: Make config.h available for all targets.
         DEPENDS ${OUTPUT_FILE}
     )
-
-    # Add dependency to each library
-    add_dependencies(remainder config_h_target)
-    add_dependencies(addition config_h_target)
-    add_dependencies(division config_h_target)
-    add_dependencies(multiplication config_h_target)
-    add_dependencies(power config_h_target)
-    add_dependencies(subtraction config_h_target)
 
 endmacro()

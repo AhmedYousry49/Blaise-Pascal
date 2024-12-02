@@ -13,5 +13,3 @@ target_include_directories(${PROJECT_NAME} PUBLIC inc)
 target_include_directories(${PROJECT_NAME} PUBLIC ${INCLUDE_DIR})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_BINARY_DIR})  # Include the generated config.h file
-
-

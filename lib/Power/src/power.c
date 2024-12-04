@@ -16,7 +16,7 @@ double powerFunction(double base, double exponent)
     temp = powerFunction(base, (exponent / 2.0));
     return (temp * temp) * (((ll)exponent % 2) ? base : 1);
 #else
-    printf("You are too poor to use the power feature :)");
+    printf("Not Allow use Power_function :)\n");
     return -1;
 #endif
 }

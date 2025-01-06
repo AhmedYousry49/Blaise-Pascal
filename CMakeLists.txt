@@ -16,12 +16,12 @@ endif()
 include(${CMAKE_SOURCE_DIR}/CmakeScript.cmake)
 
 # Add subdirectories for the libraries
-add_subdirectory(lib/remainder)
-add_subdirectory(lib/addition)
-add_subdirectory(lib/divsion)  # Make sure this directory exists
-add_subdirectory(lib/multiplication)
-add_subdirectory(lib/power)
-add_subdirectory(lib/subtraction)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/remainder)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/addition)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/divsion)  # Make sure this directory exists
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/multiplication)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/Power)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib/subtraction)
 
 # Pass the FEATURES option to the configFeature macro
 #message(${FEATURES})
